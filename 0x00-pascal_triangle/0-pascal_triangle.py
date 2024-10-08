@@ -19,7 +19,7 @@ def pascal_triangle(n):
         for i in range(0, n):
             new_list.append([])
             new_list[i].append(1)
-            for j in range(0, i):
-                new_list[i].append(new_list[i-1][j] + new_list[i-1][j-1])
+            for j in range(0, i//2):
+                new_list[i].append(new_list[i-1][j] + new_list[i-1][(-1 *j)])
             new_list[i].append(1)
     return (new_list)
