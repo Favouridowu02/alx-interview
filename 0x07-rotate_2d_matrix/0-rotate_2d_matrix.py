@@ -12,11 +12,11 @@ def rotate_2d_matrix(matrix):
         Arguments:
             matrix: the 2-Dimensional Matrix to be rotated
     """
-    if type(matrix) != list:
+    if not isinstance(matrix, list):
         return
     if len(matrix) <= 0:
         return
-    if not all(map(lambda x: type(x) == list, matrix)):
+    if not all(map(lambda x: isinstance(x, list), matrix)):
         return
     rows = len(matrix)
     cols = len(matrix[0])
